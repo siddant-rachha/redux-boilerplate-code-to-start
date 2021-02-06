@@ -1,13 +1,13 @@
 import * as actionTypes from '../actions/actionTypes';
 import { updateObject } from "../utility"
 const initialState = {
-    bannerData: null
+    carouselData: null
 }
 
 const reducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case actionTypes.FETCH_BANNER:
+        case actionTypes.FETCH_CAROUSEL_DATA:
             return updateObject(state, action.payload)
 
         default: return state;
