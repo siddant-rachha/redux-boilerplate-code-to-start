@@ -4,3 +4,26 @@ npm dependencies to install<br/>
 
 npm install react-redux --save<br/>
 npm install redux-think --save<br/>
+
+
+# in components import redux
+
+import { connect } from "react-redux";
+import * as actions from '../../store/actions/index';
+
+
+# connect the state with store and actions
+
+
+const mapStateToProps = (state) => {
+    return {
+        bannerData: state.banner.bannerData
+    };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchBanner: () => dispatch(actions.fetchBanner())
+    };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Banner);
