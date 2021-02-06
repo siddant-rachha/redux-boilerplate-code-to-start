@@ -1,0 +1,19 @@
+.Card p {
+    font-size: 0.8rem;
+}
+.Spinner {
+    position: fixed; top: 50%; left: 50vw;
+}
+@media screen and (max-width: 768px) {
+    .Card {
+        padding: 2px
+    }
+    .CardBody {
+        padding: 0.5rem;
+    }
+    .Spinner {
+        position: fixed; top: 50%;
+        left: 45vw;
+    }
+}
+
